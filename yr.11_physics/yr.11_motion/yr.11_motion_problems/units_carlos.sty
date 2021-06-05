@@ -1,0 +1,471 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{units_carlos}[2021/01/16 Units Package]
+
+% version 20210118
+%
+%
+%
+%
+
+\RequirePackage{xcolor}
+\usepackage{mathtools}
+%
+%
+% Kinematics units
+%
+%----------------------------------
+% Space/length
+%----------------------------------
+% metres SI
+\newcommand{\msis}[1]{#1 \textcolor{red!40}{\text{ m}}}
+% kilometres 
+\newcommand{\km}[1]{#1 \textcolor{red!40}{\text{ km}}}
+% centimetres cgs
+\newcommand{\cmcgs}[1]{#1 \textcolor{red!40}{\text{ cm}}}
+% millimetres mm
+\newcommand{\mm}[1]{#1 \textcolor{red!40}{\text{ mm}}}
+% terrestrial miles mi
+\newcommand{\mi}[1]{#1 \textcolor{red!40}{\text{ mi}}}
+
+\newcommand{\mile}[1]{#1 \textcolor{red!40}{\text{ mi}}}
+% nautical miles
+\newcommand{\nmi}[1]{#1 \textcolor{red!40}{\text{ nmi}}}
+% light-year
+\newcommand{\lightyear}[1]{#1 \textcolor{red!40}{\text{ ly}}}
+% parsec
+\newcommand{\parsec}[1]{#1 \textcolor{red!40}{\text{ pc}}}
+%
+
+%----------------------------------
+% Pression
+%----------------------------------
+% N/m^2 Pascal SI
+\newcommand{\pressionsis}[1]{#1 \textcolor{red!40}{\text{ Pa}}}
+% N/cm^2 Pascal SI
+\newcommand{\pressionncm}[1]{#1 \textcolor{red!40}{\text{ N}/\text{cm}^2}}
+%----------------------------------
+% Space^2/length^2
+%----------------------------------
+% metres^2 SI
+\newcommand{\msisA}[1]{#1 \textcolor{red!40}{\text{ m}^2}}
+% centimetres^2 cgs
+\newcommand{\cmcgsA}[1]{#1 \textcolor{red!40}{\text{ cm}^2}}
+% millimetres^2
+\newcommand{\mmA}[1]{#1 \textcolor{red!40}{\text{ mm}^2}}
+% terrestrial miles^2
+\newcommand{\miA}[1]{#1 \textcolor{red!40}{\text{ mi}^2}}
+%
+%----------------------------------
+% Space^3/length^3
+%----------------------------------
+% metres^3 SI
+\newcommand{\msisV}[1]{#1 \textcolor{red!40}{\text{ m}^3}}
+% centimetres^3 cgs
+\newcommand{\cmcgsV}[1]{#1 \textcolor{red!40}{\text{ m}^3}}
+% millimetres^3
+\newcommand{\mmV}[1]{#1 \textcolor{red!40}{\text{ m}^3}}
+% terrestrial miles^3
+\newcommand{\miV}[1]{#1 \textcolor{red!40}{\text{ mi}^3}}
+% litre
+\newcommand{\litre}[1]{#1 \textcolor{red!40}{\text{ l}}}
+% gallon
+\newcommand{\gallon}[1]{#1 \textcolor{red!40}{\text{ gal}}}
+%----------------------------------
+% Time
+%----------------------------------
+% second SI
+\newcommand{\ssis}[1]{#1 \textcolor{red!40}{\text{ s}}}
+\newcommand{\tsis}[1]{#1 \textcolor{red!40}{\text{ s}}}
+% minute cgs
+\newcommand{\mincgs}[1]{#1 \textcolor{red!40}{\text{ min}}}
+% hour
+\newcommand{\hours}[1]{#1 \textcolor{red!40}{\text{ h}}}
+% day
+\newcommand{\days}[1]{#1 \textcolor{red!40}{\text{ day}}}
+% month
+\newcommand{\months}[1]{#1 \textcolor{red!40}{\text{ month}}}
+% year
+\newcommand{\years}[1]{#1 \textcolor{red!40}{\text{ yr}}}
+%
+%----------------------------------
+% Velocity/speed
+%----------------------------------
+% metres/second SI
+\newcommand{\vsis}[1]{#1 \textcolor{red!40}{\text{ m}/\text{s}}}
+% kilometres/hour
+\newcommand{\kmh}[1]{#1 \textcolor{red!40}{\text{ km}/\text{h}}}
+% terrestrial miles/hour
+\newcommand{\mih}[1]{#1 \textcolor{red!40}{\text{ mi}\cdot\text{h}^{-1}}}
+% nautical miles/hour
+\newcommand{\knots}[1]{#1 \textcolor{red!40}{\text{ kn}}}
+% centimetres/minute cgs
+% \newcommand{\vcgs}[1]{#1 \textcolor{red!40}{\text{ cm}\cdot\text{min}^{-1}}}
+% centimetres/minute cgs
+\newcommand{\vcgs}[1]{#1 \textcolor{red!40}{\text{ cm}/\text{min}}}
+% (metres/second)^2 SI
+\newcommand{\vssis}[1]{#1 \textcolor{red!40}{\text{ m}^{2}\cdot\text{s}^{-2}}}
+%----------------------------------
+% Acceleration/rate of change of speed
+%----------------------------------
+% metres/second^2 SI
+\newcommand{\asis}[1]{#1 \textcolor{red!40}{\text{ m}/\text{s}^{2}}}
+% centimetres/minute^2 cgs
+\newcommand{\acgs}[1]{#1 \textcolor{red!40}{\text{ cm}\cdot\text{min}^{-2}}}
+% kilometres/hour^2
+\newcommand{\akmh}[1]{#1 \textcolor{red!40}{\text{ m}\cdot\text{h}^{-2}}}
+% terrestrial miles/hour
+\newcommand{\amih}[1]{#1 \textcolor{red!40}{\text{ mi}\cdot\text{s}^{-2}}}
+% nautical miles/hour^2
+\newcommand{\anmi}[1]{#1 \textcolor{red!40}{\text{ nmi}\cdot\text{h}^{-2}}}
+%
+%
+% Dynamics units
+%
+%----------------------------------
+% Mass
+%----------------------------------
+% kilogram SI
+\newcommand{\kgsis}[1]{#1 \textcolor{red!40}{\text{ kg}}}
+% gram cgs
+\newcommand{\gcgs}[1]{#1 \textcolor{red!40}{\text{ g}}}
+\newcommand{\gram}[1]{#1 \textcolor{red!40}{\text{ g}}}
+% tonne
+\newcommand{\tonne}[1]{#1 \textcolor{red!40}{\text{ t}}}
+% pound
+\newcommand{\pound}[1]{#1 \textcolor{red!40}{\text{ lb}}}
+\newcommand{\lb}[1]{#1 \textcolor{red!40}{\text{ lb}}}
+%
+%----------------------------------
+% Linear momentum
+%----------------------------------
+% p SI
+\newcommand{\psis}[1]{#1 \textcolor{red!40}{\text{ kg}\cdot\text{m}\cdot\text{s}^{-1}}}
+% p SI
+\newcommand{\pcgs}[1]{#1 \textcolor{red!40}{\text{ g}\cdot\text{cm}\cdot\text{s}^{-1}}}
+%
+%----------------------------------
+% Impulse
+%----------------------------------
+% p SI
+\newcommand{\Isis}[1]{#1 \textcolor{red!40}{\text{ kg}\cdot\text{m}\cdot\text{s}^{-1}}}
+% p SI
+\newcommand{\Icgs}[1]{#1 \textcolor{red!40}{\text{ g}\cdot\text{cm}\cdot\text{s}^{-1}}}
+%
+%----------------------------------
+% Force
+%----------------------------------
+% Newton SI
+\newcommand{\fsis}[1]{#1 \textcolor{red!40}{\text{ N}}}
+\newcommand{\Nsis}[1]{#1 \textcolor{red!40}{\text{ N}}}
+% dyne cgs
+\newcommand{\fcgs}[1]{#1 \textcolor{red!40}{\text{ dyn}}}
+\newcommand{\dyne}[1]{#1 \textcolor{red!40}{\text{ dyn}}}
+%
+%----------------------------------
+% Moment of a Force
+%----------------------------------
+% Newton*metres SI
+\newcommand{\momentsis}[1]{#1 \textcolor{red!40}{\text{ N}\cdot\text{m}}}
+%----------------------------------
+% Hooke's law Spring constant
+%----------------------------------
+% N/m
+\newcommand{\Hookesis}[1]{#1 \textcolor{red!40}{\text{ N}/\text{m}}}
+% N/cm
+\newcommand{\Hookencm}[1]{#1 \textcolor{red!40}{\text{ N}/\text{cm}}}
+
+
+
+%----------------------------------
+% Energy/work/Power
+%----------------------------------
+% Joule SI
+\newcommand{\ensis}[1]{#1 \textcolor{red!40}{\text{ J}}}
+\newcommand{\joule}[1]{#1 \textcolor{red!40}{\text{ J}}}
+% erg cgs
+\newcommand{\ergcgs}[1]{#1 \textcolor{red!40}{\text{ erg}}}
+% electron-volt eV
+\newcommand{\enev}[1]{#1 \textcolor{red!40}{\text{ eV}}}
+% Power SI
+\newcommand{\powersis}[1]{#1 \textcolor{red!40}{\text{ W}}}
+%----------------------------------
+% Moment/Torque of a force
+%----------------------------------
+% Moment of a force SI
+\newcommand{\Msis}[1]{#1 \textcolor{red!40}{\text{ N}\cdot\text{m}}}
+\newcommand{\Momentsis}[1]{#1 \textcolor{red!40}{\text{ N}\cdot\text{m}}}
+%
+%----------------------------------
+% Power
+%----------------------------------
+% Watt SI
+\newcommand{\Wsis}[1]{#1 \textcolor{red!40}{\text{ W}}}
+\newcommand{\Powersis}[1]{#1 \textcolor{red!40}{\text{ W}}}
+% erg cgs
+\newcommand{\ergcgs}[1]{#1 \textcolor{red!40}{\text{ erg}\cdot\text{s}^{-1}}}
+\newcommand{\Powercgs}[1]{#1 \textcolor{red!40}{\text{ erg}\cdot\text{s}^{-1}}}
+% electron-volt eV
+\newcommand{\Powerev}[1]{#1 \textcolor{red!40}{\text{ eV}\cdot\text{s}^{-1}}}
+
+
+
+
+%
+%
+% Constants
+%
+% Light speed, c=299792458 m/s
+\newcommand{\c}{299792458 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-1}}}
+\newcommand{\lightspeed}{299792458 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-1}}}
+\newcommand{\roundc}{3\times 10^8 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-1}}}
+\newcommand{\roundlightspeed}{3\times 10^8 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-1}}}
+% Planck constant, c=299792458 m/s
+\newcommand{\hplancksis}{xxx \textcolor{red!40}{\text{ m}\cdot\text{s}^{-1}}}
+%----------------------------------
+% Constants Gravitation
+%----------------------------------
+% universal gravitational constant
+\newcommand{\G}{6.67430(15)\times 10^{-11} \textcolor{red!40}{\text{ N}\cdot\text{kg}^{-1}\cdot\text{s}^{-2}}}
+%
+% Earth constants
+%
+% Earth surface gravity
+\newcommand{\gearth}{9.81 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-2}}}
+% GCSE Earth surface gravity
+\newcommand{\gearthGCSE}{10 \textcolor{red!40}{\text{ }\displaystyle\frac{\text{N}}{\text{kg}}}}
+% Earth radius
+\newcommand{\Ersis}{6.371\times10^{6}\textcolor{red!40}{\text{ m}}}
+% Earth mass SI
+\newcommand{\Emsis}{5.972\times 10^{24}\textcolor{red!40}{\text{ kg}}}
+%
+% Moon constants
+%
+% Moon surface gravity
+\newcommand{\gmoon}{1.62 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-2}}}
+%
+%
+% 
+%
+% 
+
+
+
+
+
+
+
+% %
+% %
+% 
+% %
+% %
+% %
+% % Gravitational constant
+% %
+% \newcommand{\Gsis}{6.67408\times10^{-11}\textcolor{red!40}{\text{ m$^3$kg$^{-1}$s$^{-2}$ }}}
+% %
+% %
+% % Earth mass
+% %
+% \newcommand{\Emsis}{5.972\times10^{24}\textcolor{red!40}{\text{ kg }}}
+% %
+% % Sun mass
+% % 
+% \newcommand{\Smsis}{1.989\times10^{30}\textcolor{red!40}{\text{ kg }}}
+% %
+% %
+% %
+% % Moon mass
+% % 7.34767309 × 1022
+% \newcommand{\Momsis}{7.34767309\times10^{22}\textcolor{red!40}{\text{ kg }}}
+% %
+% %
+% %
+% % Earth radius
+% %
+% %
+% \newcommand{\Ersis}{6.371\times10^{6}\textcolor{red!40}{\text{ m  }}}
+% %
+% %
+% % Moon radius
+% %
+% %
+% \newcommand{\Morsis}{1.737\times10^{6}\textcolor{red!40}{\text{ m }}}
+% %
+% %
+% %6.95510000 10^8 m
+% %
+% %
+% %
+% % Sun radius
+% %
+% %
+% \newcommand{\Sursis}{6.9551\times10^{8}\textcolor{red!40}{\text{m  }}}
+% %
+% %
+% \newcommand{\psis}[1]{#1 \textcolor{red!40}{\text{ kg}\cdot\text{m}\cdot\text{s}^{-1}}}
+% %
+% %
+
+% %
+% %
+
+
+%
+%
+% Electricity units
+%
+%----------------------------------
+% Electron charge
+%----------------------------------
+% Electron charge
+\newcommand{\qelsis}{-1.6\times 10^{-19} \textcolor{red!40}{\text{ C}}}
+\newcommand{\posqelsis}{1.6\times 10^{-19} \textcolor{red!40}{\text{ C}}}
+% Ampere
+\newcommand{\isis}[1]{#1 \textcolor{red!40}{\text{ A}}}
+\newcommand{\amp}[1]{#1 \textcolor{red!40}{\text{ A}}}
+% Coulomb
+\newcommand{\coulomb}[1]{#1 \textcolor{red!40}{\text{ C}}}
+% Voltage Volt V
+\newcommand{\volt}[1]{#1 \textcolor{red!40}{\text{ V}}}
+% Resistence Ohm
+\newcommand{\ohmsis}[1]{#1 \textcolor{red!40}{\text{ }\Omega}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % MACROS AND OPERATORS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Velocity units.
+% % Use: \asi{3} = 3 m$\cdot$s$^{-1}$
+% \newcommand{\vsi}[1]{#1 \textcolor{red!40}{m$\cdot$s$^{-1}$}}
+
+% \newcommand{\asi}[1]{#1 \textcolor{red!40}{m$\cdot$s$^{-2}$}}
+% % Acceleration units. 
+% % Use: \asi{3} = 3 m$\cdot$s$^{-2}$
+% %
+% %
+% % Pressure SI
+% \newcommand{\pasis}[1]{#1 \textcolor{red!40}{\text{ Pa}}}
+% %
+% %
+% % Force SI
+% \newcommand{\fsis}[1]{#1 \textcolor{red!40}{\text{ N}}}
+% %
+% % ENERGY SI
+% \newcommand{\ensis}[1]{#1 \textcolor{red!40}{\text{ J}}}
+% %
+% % ENERGY eV
+% \newcommand{\enev}[1]{#1 \textcolor{red!40}{\text{ eV}}}
+% %
+% % POWER SI
+% \newcommand{\powsis}[1]{#1 \textcolor{red!40}{\text{ W}}}
+% % ACTION SI
+% \newcommand{\actsis}[1]{#1 \textcolor{red!40}{\text{ J}\cdot\text{s}}}
+% %
+% % ACCELERATION SI
+% \newcommand{\asis}[1]{#1 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-2}}}
+% %
+% % METERS SI
+% \newcommand{\msis}[1]{#1 \textcolor{red!40}{\text{ m}}}
+% %
+% %
+% % METERS^2 SI
+% \newcommand{\mtwosis}[1]{#1 \textcolor{red!40}{\text{ m}^2}}
+% %
+% % cm
+% \newcommand{\cm}[1]{#1 \textcolor{red!40}{\text{ cm}}}
+% %
+% % cm^2
+% \newcommand{\cmtwo}[1]{#1 \textcolor{red!40}{\text{ cm}^2}}
+% %
+% % mm
+% \newcommand{\mm}[1]{#1 \textcolor{red!40}{\text{ mm}}}
+% %
+% % mm^2
+% \newcommand{\mmtwo}[1]{#1 \textcolor{red!40}{\text{ mm}^2}}
+% %
+% % VELOCITY SI
+% \newcommand{\vsis}[1]{#1 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-1}}}
+% %
+% %
+% \newcommand{\asib}[1]{{\bf #1 m}$\bm{\cdot}${\bf s}$\bm{^{-2}}$}
+% %
+% % TIME SECONDS
+% \newcommand{\tsis}[1]{#1 \textcolor{red!40}{\text{ s}}}
+% %
+% % FREQUENCY SI
+% \newcommand{\fresis}[1]{#1 \textcolor{red!40}{\text{ Hz}}}
+% %
+% % MASS SI
+% \newcommand{\kgsis}[1]{#1 \textcolor{red!40}{\text{ kg}}}
+% %
+% % KILOMETER
+% \newcommand{\kmsis}[1]{#1 \textcolor{red!40}{\text{ km}}}
+% %
+% %
+% % HOUR
+% \newcommand{\thsis}[1]{#1 \textcolor{red!40}{\text{ h}}}
+% %
+% % KILOMETER PER HOUR
+% \newcommand{\vkmh}[1]{#1 \textcolor{red!40}{\text{ km}\cdot\text{h}^{-1}}}
+% %
+% %
+% % Earth gravity easy
+% \newcommand{\geasy}{10 \textcolor{red!40}{\text{ }\frac{\text{N}}{\text{kg}}}}
+% %
+% %
+% % Earth gravity easy
+% \newcommand{\asisnkg}[1]{#1 \textcolor{red!40}{\text{ }\frac{\text{N}}{\text{kg}}}}
+% % 
+% %
+% % ELECTRON CHARGE 
+% \newcommand{\ecsis}{1.60217662 \times 10^{-19} \textcolor{red!40}{\text{ C}}}
+% %
+% % PLANCK CONSTANT SI
+% \newcommand{\hplancksis}{6.62607004 \times 10^{-34} \textcolor{red!40}{\text{ m}^2\cdot\text{kg}\cdot\text{s}^{-1}}}
+% %
+% % PLANCK CONSTANT eV
+% \newcommand{\hplanckev}{4.135667696 \times 10^{-15} \textcolor{red!40}{\text{ eV}\cdot\text{s}}}
+% %
+% % SPEED OF LIGHT EXACT
+% \newcommand{\csis}{299792458 \textcolor{red!40}{\text{ m}\cdot\text{s}^{-1}}}
+% %
+% % ELECTRON MASS
+% \newcommand{\mesis}{9.10938356\times 10^{-31} \textcolor{red!40}{\text{ kg}}}
+% %
+% % VOLT SI (E/Q)
+% \newcommand{\voltsis}[1]{#1 \textcolor{red!40}{\text{ V}}}
+% %
+% %CHARGE SI 
+% \newcommand{\qsis}[1]{#1 \textcolor{red!40}{\text{ C}}}
+% %
+% %CURRENT SI 
+% \newcommand{\isis}[1]{#1 \textcolor{red!40}{\text{ A}}}
+% %
+% % RADIANS
+% \newcommand{\rad}[1]{#1 \textcolor{red!40}{\text{ rad}}}
+% %
+% % DEGREES
+% \newcommand{\degr}[1]{#1 \textcolor{red!40}{^\circ}}
+% %
+% % ANGULAR SPEED
+% \newcommand{\wsis}[1]{#1 \textcolor{red!40}{\text{ rad}\cdot\text{s}^{-1}}}
+% %
+% % Hooke CONSTANT
+% \newcommand{\Hookesis}[1]{#1 \textcolor{red!40}{\text{ N}\cdot\text{m}^{-1}}}
+% %
